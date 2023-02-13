@@ -31,3 +31,5 @@ const commentSchema = new Schema(
         },
     },
 )
+
+module.exports 
