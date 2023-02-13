@@ -2,7 +2,13 @@
 
 
 ## Description
-Pet Social app is a phot sharing social networking service that allows users to upload media that can shared publicly with followers. Users can browse other users content, like photos, and follow other users to add their content to a personal feed.
+Pet Social app is a photo sharing social networking service that allows users 
+
+to upload media that can be shared publicly 
+
+with followers. Users can browse other users content, like photos, 
+
+and follow other users to add their content to a personal feed.
 ***
 
 
