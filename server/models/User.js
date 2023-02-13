@@ -20,9 +20,17 @@ const userSchema = new Schema(
       required: true,
       minlength: 5,
     },
-    thoughts: [{
+    pet: {
       type: Schema.Types.ObjectId,
-      ref: "Thought",
+      ref: 'pet',
+    },
+    ownerName: {
+      type: Schema.Types.ObjectId,
+      ref: "username",
+    },
+    posts: [{
+      type: Schema.Types.ObjectId,
+      ref: "Post",
     }],
     friends: [{
       type: Schema.Types.ObjectId,
@@ -46,9 +54,33 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
-// userSchema.virtual("friendCount").get(function () {
-//   return this.friends.length;
-// });
+userSchema.virtual("friendCount").get(function () {
+  return this.friends.length;
+});
+
+// POTENTIAL FRIEND COUNT FUNCTION (CHANGE STUDENT INSTANCES TO FRIEND)
+
+// const headCount = async () =>
+//   Student.aggregate()
+//     .count('studentCount')
+//     .then((numberOfStudents) => numberOfStudents);
+
+// // Aggregate function for getting the overall grade using $avg
+// const grade = async (studentId) =>
+//   Student.aggregate([
+//     // only include the given student by using $match
+//     { $match: { _id: ObjectId(studentId) } },
+//     {
+//       $unwind: '$assignments',
+//     },
+//     {
+//       $group: {
+//         _id: ObjectId(studentId),
+//         overallGrade: { $avg: '$assignments.score' },
+//       },
+//     },
+//   ]);
+
 
 userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
