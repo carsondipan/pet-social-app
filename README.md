@@ -1,24 +1,37 @@
-# pet-social-app
+# Pet-Social-App
+
+
+## Description
+Pet Social App is a photo sharing social networking service that allows users to upload media that cab be
+
+ shared publicly with followers. Users can browse other users content, like photos, and follow 
+ 
+ git other users to add their content to a personal feed.
+***
 
 
 ## Table of Contents
-- [Description](#description)
-- [Visuals](#visuals)
+- [Installation](#installation)
+- [Usage](#usage)
 - [Links](#links)
+- [Visual](#visual)
 - [Collaborators](#collaborators)
 
 ***
 
-## Description
+## Installation
 
 ***
 
-## Visuals
-
+## Usage
 ***
 
 ## Links
-Link to our project:
+Link to our project: https://github.com/carsondipan/pet-social-app
+
+***
+
+## Visual
 
 ***
 
