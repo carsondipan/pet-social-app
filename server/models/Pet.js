@@ -30,5 +30,8 @@ const petSchema = new Schema (
             ref: "username",
         },
         //ID WILL REFERENCE USER ID AND AUTOINCREMENT IF YOU ALREADY HAVE ONE PET.
-    }
-)
+    });
+
+    const Pet = model('Pet', petSchema);
+    
+    module.exports = Pet;
