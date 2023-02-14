@@ -23,13 +23,13 @@ const commentSchema = new Schema(
         username: {
             type: Schema.Types.ObjectId,
             required: true,
-            ref: 'username',
+            ref: 'User',
         },
         createdAt: {
             type: Date,
             default: Date.now(),
         },
     },
-)
+);
 
-module.exports 
+module.exports = Comment;
