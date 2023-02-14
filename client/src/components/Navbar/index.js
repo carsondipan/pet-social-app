@@ -17,21 +17,6 @@ function Navbar() {
           <nav class="container flex justify-around py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
             <div class="flex flex-wrap items-center">
               <Link to="/"><h3 class=" text-2xl font-medium text-blue-500">PETBOOK</h3></Link>
-              <svg
-                xmlns="<http://www.w3.org/2000/svg>"
-                id="menu-button"
-                class="h-6 w-6 cursor-pointer text-gray-500 lg:hidden block"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
             </div>
 
             <div class="items-center hidden space-x-8 lg:flex text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200">
@@ -42,10 +27,8 @@ function Navbar() {
               <a href="">Find A Pet</a>
               <a href="">Donate</a>
               <a href="">Search</a>
-            </div>
 
-            {/* Notifications */}
-            <div class="flex items-center hidden space-x-2 lg:flex">
+              {/* Notifications */}
               <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -106,6 +89,24 @@ function Navbar() {
                 Log out
               </button>
             </div>
+
+            <button class="mobile-menu-button">
+              <svg
+                xmlns="<http://www.w3.org/2000/svg>"
+                id="menu-button"
+                class="h-6 w-6 cursor-pointer text-gray-300 lg:hidden block"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
           </nav>
         </div >
         {/* <button onClick={logout}>
@@ -123,21 +124,6 @@ function Navbar() {
         <nav class="container flex justify-around py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
           <div class="flex items-center">
             <Link to="/"><h3 class=" text-2xl font-medium text-blue-500">PETBOOK</h3></Link>
-            <svg
-              xmlns="<http://www.w3.org/2000/svg>"
-              id="menu-button"
-              class="h-6 w-6 cursor-pointer text-gray-500 lg:hidden block"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
           </div>
 
           <div class="items-center hidden space-x-8 lg:flex text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200">
@@ -148,9 +134,7 @@ function Navbar() {
             <a href="">Find A Pet</a>
             <a href="">Donate</a>
             <a href="">Search</a>
-          </div>
 
-          <div class="flex items-center space-x-2">
             <Link to="/login">
               <button class="px-4 py-2 text-blue-100 bg-blue-800 rounded-md">
                 Log in
@@ -162,6 +146,24 @@ function Navbar() {
               </button>
             </Link>
           </div>
+
+          <button class="mobile-menu-button">
+            <svg
+              xmlns="<http://www.w3.org/2000/svg>"
+              id="menu-button"
+              class="h-6 w-6 cursor-pointer text-gray-300 lg:hidden block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </nav>
       </div>
       {/* <Link to="/login">
