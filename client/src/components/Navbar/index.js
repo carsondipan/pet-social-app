@@ -172,7 +172,7 @@ function Navbar() {
       </Link> */}
     </>
 
-
+    // HAMBURGER DROPDOWN NOT PROPERLY WORKING FOR BOTH NAVBARS
   )
 }
 
