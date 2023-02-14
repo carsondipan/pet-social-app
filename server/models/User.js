@@ -19,15 +19,25 @@ const userSchema = new Schema(
       type: String,
       required: true,
       minlength: 5,
-     },
-     numberOfPets: {
+    },
+    numberOfPets: {
       type: Number,
       required: true,
-     },
-     Location: {
+    },
+    Location: {
       type: String,
       required: true,
-     }
+    },
+    // listPets: {
+    //   [
+    //       type: String,
+          
+    //   ],
+    // },
+    // petImage: {
+    //   type: String,
+    //   ref: ""
+    // },
   }
 );
 

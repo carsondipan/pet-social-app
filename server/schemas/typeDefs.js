@@ -6,7 +6,8 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
-    pets(pets)
+    listPets: [Pets]
+
   }
 
   type Pet {
@@ -16,7 +17,7 @@ const typeDefs = gql`
     petType: String
     petGender: String
     petAvailable: Boolean
-    petOwner: Schema.Types.ObjectId
+    
   }
   
   type Auth {

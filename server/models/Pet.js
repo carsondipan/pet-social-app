@@ -18,16 +18,12 @@ const petSchema = new Schema(
             required: true,
         },
         petGender: {
-            type: Boolean,
+            type: String,
             required: false,
         },
         petAvailable: {
             type: Boolean,
             required: false,
-        },
-        petOwner: {
-            type: Schema.Types.ObjectId,
-            ref: "username",
         },
         //ID WILL REFERENCE USER ID AND AUTOINCREMENT IF YOU ALREADY HAVE ONE PET.
     });
