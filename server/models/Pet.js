@@ -18,7 +18,7 @@ const petSchema = new Schema(
             required: true,
         },
         petGender: {
-            type: String,
+            type: Boolean,
             required: false,
         },
         petAvailable: {

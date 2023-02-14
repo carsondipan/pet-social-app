@@ -20,10 +20,10 @@ const userSchema = new Schema(
       required: true,
       minlength: 5,
     },
-    pet: {
-      type: Schema.Types.ObjectId,
-      ref: 'pet',
-    },
+    // pet: {
+    //   type: Schema.Types.ObjectId,
+    //   ref: 'pet',
+    // },
     ownerName: {
       type: Schema.Types.ObjectId,
       ref: "username",
@@ -45,46 +45,46 @@ const userSchema = new Schema(
   }
 );
 
-// Provided with Anthony's boilerplate - need to test
-userSchema.pre('save', async function (next) {
-  if (this.isNew || this.isModified('password')) {
-    const saltRounds = 10;
-    this.password = await bcrypt.hash(this.password, saltRounds);
-  }
-  next();
-});
+// // Provided with Anthony's boilerplate - need to test
+// userSchema.pre('save', async function (next) {
+//   if (this.isNew || this.isModified('password')) {
+//     const saltRounds = 10;
+//     this.password = await bcrypt.hash(this.password, saltRounds);
+//   }
+//   next();
+// });
 
-userSchema.virtual("friendCount").get(function () {
-  return this.friends.length;
-});
+// userSchema.virtual("friendCount").get(function () {
+//   return this.friends.length;
+// });
 
 // POTENTIAL FRIEND COUNT FUNCTION (CHANGE STUDENT INSTANCES TO FRIEND)
 
-// const headCount = async () =>
-//   Student.aggregate()
-//     .count('studentCount')
+// const friendCount = async () =>
+//   friend.aggregate()
+//     .count('friendCount')
 //     .then((numberOfStudents) => numberOfStudents);
 
 // // Aggregate function for getting the overall grade using $avg
-// const grade = async (studentId) =>
-//   Student.aggregate([
-//     // only include the given student by using $match
-//     { $match: { _id: ObjectId(studentId) } },
-//     {
-//       $unwind: '$assignments',
-//     },
-//     {
-//       $group: {
-//         _id: ObjectId(studentId),
-//         overallGrade: { $avg: '$assignments.score' },
-//       },
-//     },
-//   ]);
+// const grade = async (friendId) =>
+//   friend.aggregate([
+//     // only include the given friend by using $match
+// //     { $match: { _id: ObjectId(friendId) } },
+// //     {
+// //       $unwind: '$assignments',
+// //     },
+// //     {
+// //       $group: {
+// //         _id: ObjectId(friendId),
+// //         overallGrade: { $avg: '$assignments.score' },
+// //       },
+// //     },
+// //   ]);
 
 
-userSchema.methods.isCorrectPassword = async function (password) {
-  return bcrypt.compare(password, this.password);
-};
+// userSchema.methods.isCorrectPassword = async function (password) {
+//   return bcrypt.compare(password, this.password);
+// };
 
 const User = model('User', userSchema);
 

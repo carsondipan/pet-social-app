@@ -30,6 +30,6 @@ const commentSchema = new Schema(
             default: Date.now(),
         },
     },
-)
+);
 
-module.exports 
+module.exports = Comment;
