@@ -24,8 +24,14 @@ export const ADD_USER = gql`
   }
 `;
 
-export const ADD_FRIEND = gql `
-  mutation addFriend($)
-
-
-  `;
+// export const ADD_FRIEND = gql`
+//   mutation addFriend($username: String!, $email: String!, $password: String!) {
+//     addFriend($username: String!, $email: String!, $password: String!) {
+//       token
+//       user {
+//         _id
+//         username
+//       }
+//     }
+//   }
+// `;

@@ -63,10 +63,24 @@ const Signup = () => {
           onChange={handleChange}
         />
         <input
-          placeholder="******"
+          placeholder="*****"
           name="password"
           type="password"
           value={formState.password}
+          onChange={handleChange}
+        />
+        <input
+          placeholder="Location"
+          name="location"
+          type="location"
+          value={formState.location}
+          onChange={handleChange}
+        />
+         <input
+          placeholder="Number of Pets"
+          name="numberOfPets"
+          type="numberOfPets"
+          value={formState.numberOfPets}
           onChange={handleChange}
         />
         <button type="submit">

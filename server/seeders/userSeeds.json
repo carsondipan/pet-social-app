@@ -2,6 +2,9 @@
   {
     "username": "testuser",
     "email": "test@user.com",
-    "password": "password1234"
+    "password": "password1234",
+    "location": "hell",
+    "numberOfPets": "420",
+    "listPets": []
   }
 ]

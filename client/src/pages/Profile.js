@@ -67,6 +67,13 @@ const Profile = () => {
         </h2>
         {renderCurrentUserInfo()}
         {renderUserList()}
+        {/* <input
+          placeholder="All Pets"
+          name="listPets"
+          type="listPets"
+          value={formState.listPets}
+          onChange={handleChange}
+        /> */}
       </div>
     </div>
 

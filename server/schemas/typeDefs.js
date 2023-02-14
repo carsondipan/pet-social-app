@@ -6,8 +6,8 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
-    numberOfPets: INTEGER
-    Location: String
+    numberOfPets: Int
+    location: String
     listPets: [Pet]
 
   }
@@ -15,7 +15,7 @@ const typeDefs = gql`
   type Pet {
     _id: ID
     petName: String
-    petAge: Number
+    petAge: Int
     petType: String
     petGender: String
     
@@ -36,7 +36,6 @@ const typeDefs = gql`
   type Mutation {
     addUser(email:String!, username:String!, password:String!): Auth
     login(email:String!, password:String!): Auth
-
   }
 `;
 
