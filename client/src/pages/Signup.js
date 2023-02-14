@@ -40,14 +40,14 @@ const Signup = () => {
   const renderForm = () => {
     if (data) {
       return (
-      <p>
-        Success! You may now head{' '}
-        <Link to="/">back to the homepage.</Link>
-      </p>
+        <p class="py-5">
+          Success! You may now head{' '}
+          <Link to="/">back to the homepage.</Link>
+        </p>
       )
-    } 
+    }
     return (
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={handleFormSubmit} class="py-5">
         <input
           placeholder="Your username"
           name="username"
@@ -77,7 +77,7 @@ const Signup = () => {
   };
 
   return (
-    <main>
+    <main class="py-5">
       <h4>this is a sign up</h4>
       <div>
         {renderForm()}

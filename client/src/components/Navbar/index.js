@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
@@ -12,71 +13,163 @@ function Navbar() {
   if (Auth.loggedIn()) {
     return (
       <>
-        <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
-          <div class="container flex flex-wrap items-center justify-between mx-auto">
-            <a href="/" class="flex items-center">
-              <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
-              <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Petbook</span>
-            </a>
-            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-              <span class="sr-only">Open main menu</span>
-              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-            </button>
-            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-              <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                <li>
-                  <a href="/" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
-                </li>
-                <li>
-                  <a href="/me" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Profile</a>
-                </li>
-                <li>
-                  <a href="/me" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Users</a>
-                </li>
-              </ul>
+        <div className="bg-gray-900">
+          <nav class="container flex justify-around py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+            <div class="flex flex-wrap items-center">
+              <Link to="/"><h3 class=" text-2xl font-medium text-blue-500">PETBOOK</h3></Link>
+              <svg
+                xmlns="<http://www.w3.org/2000/svg>"
+                id="menu-button"
+                class="h-6 w-6 cursor-pointer text-gray-500 lg:hidden block"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
             </div>
-          </div>
-        </nav>
-        <button onClick={logout}>
+
+            <div class="items-center hidden space-x-8 lg:flex text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200">
+              <a href="">New Posts</a>
+              <a href="">Top Posts</a>
+              <a href="">Users</a>
+              <a href="">Adopt A Pet</a>
+              <a href="">Find A Pet</a>
+              <a href="">Donate</a>
+              <a href="">Search</a>
+            </div>
+
+            {/* Notifications */}
+            <div class="flex items-center hidden space-x-2 lg:flex">
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                  />
+                </svg>
+              </a>
+              {/* Settings */}
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 text-gray-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </a>
+              {/* Profile/user */}
+              <a href="/me" class="p-2 rounded-full bg-blue-50">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 text-gray-200"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                  />
+                </svg>
+              </a>
+              <button onClick={logout} class="px-4 py-2 text-blue-100 bg-blue-800 rounded-md">
+                Log out
+              </button>
+            </div>
+          </nav>
+        </div >
+        {/* <button onClick={logout}>
           Logout
-        </button>
+        </button> */}
       </>
     );
   }
+
+
   // If logged out show login controls
   return (
     <>
-      <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
-        <div class="container flex flex-wrap items-center justify-between mx-auto">
-          <a href="/" class="flex items-center">
-            <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
-            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Petbook</span>
-          </a>
-          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-          </button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              <li>
-                <a href="/" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
-              </li>
-              <li>
-                <a href="/me" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Profile</a>
-              </li>
-              <li>
-                <a href="/me" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Users</a>
-              </li>
-            </ul>
+      <div className="bg-gray-900">
+        <nav class="container flex justify-around py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+          <div class="flex items-center">
+            <Link to="/"><h3 class=" text-2xl font-medium text-blue-500">PETBOOK</h3></Link>
+            <svg
+              xmlns="<http://www.w3.org/2000/svg>"
+              id="menu-button"
+              class="h-6 w-6 cursor-pointer text-gray-500 lg:hidden block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
           </div>
-        </div>
-      </nav>
-      <Link to="/login">
+
+          <div class="items-center hidden space-x-8 lg:flex text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200">
+            <a href="">New Posts</a>
+            <a href="">Top Posts</a>
+            <a href="">Users</a>
+            <a href="">Adopt A Pet</a>
+            <a href="">Find A Pet</a>
+            <a href="">Donate</a>
+            <a href="">Search</a>
+          </div>
+
+          <div class="flex items-center space-x-2">
+            <Link to="/login">
+              <button class="px-4 py-2 text-blue-100 bg-blue-800 rounded-md">
+                Log in
+              </button>
+            </Link>
+            <Link to="/signup">
+              <button class="px-4 py-2 text-gray-200 bg-gray-400 rounded-md">
+                Sign up
+              </button>
+            </Link>
+          </div>
+        </nav>
+      </div>
+      {/* <Link to="/login">
         Login
       </Link>
       <Link to="/signup">
         Signup
-      </Link>
+      </Link> */}
     </>
 
 

@@ -30,12 +30,12 @@ const Profile = () => {
   }
 
   if (loading) {
-    return <h4>Loading...</h4>;
+    return <h4 class="py-5">Loading...</h4>;
   }
 
   if (!user?.username) {
     return (
-      <h4>
+      <h4 class="py-5">
         You need to be logged in to see this. Use the navigation links above to
         sign up or log in!
       </h4>
@@ -52,7 +52,7 @@ const Profile = () => {
   const renderCurrentUserInfo = () => {
     if (id) return null;
     return (
-      <ul>
+      <ul class="py-5">
         <li>username: {user.username}</li>
         <li>email: {user.email}</li>
       </ul>
@@ -60,7 +60,7 @@ const Profile = () => {
   }
 
   return (
-    <div>
+    <div class="py-5">
       <div>
         <h2>
           Viewing {id ? `${user.username}'s` : 'your'} profile.
