@@ -28,19 +28,15 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    // listPets: {
-    //   [
-    //       type: String,
-          
-    //   ],
-    // },
-    // petImage: {
-    //   type: String,
-    //   ref: ""
-    // },
+    listPets: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Pet'
+      }
+    ]
   }
 );
-
+      
 const User = model('User', userSchema);
 
 module.exports = User;

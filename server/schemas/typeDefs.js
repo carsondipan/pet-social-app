@@ -6,7 +6,9 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
-    listPets: [Pets]
+    numberOfPets: INTEGER
+    Location: String
+    listPets: [Pet]
 
   }
 
@@ -16,7 +18,6 @@ const typeDefs = gql`
     petAge: Number
     petType: String
     petGender: String
-    petAvailable: Boolean
     
   }
   

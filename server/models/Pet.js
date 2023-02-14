@@ -20,11 +20,7 @@ const petSchema = new Schema(
         petGender: {
             type: String,
             required: false,
-        },
-        petAvailable: {
-            type: Boolean,
-            required: false,
-        },
+        }
         //ID WILL REFERENCE USER ID AND AUTOINCREMENT IF YOU ALREADY HAVE ONE PET.
     });
 
