@@ -2,7 +2,7 @@ const { Schema, model, Types } = require('mongoose');
 const { schema } = require('./Post');
 
 
-const petSchema = new Schema (
+const petSchema = new Schema(
     {
         petName: {
             type: String,
@@ -22,7 +22,7 @@ const petSchema = new Schema (
             required: false,
         },
         petAvailable: {
-            type: confirm,
+            type: Boolean,
             required: false,
         },
         petOwner: {
@@ -32,6 +32,6 @@ const petSchema = new Schema (
         //ID WILL REFERENCE USER ID AND AUTOINCREMENT IF YOU ALREADY HAVE ONE PET.
     });
 
-    const Pet = model('Pet', petSchema);
-    
-    module.exports = Pet;
+const Pet = model('Pet', petSchema);
+
+module.exports = Pet;

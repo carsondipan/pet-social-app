@@ -42,14 +42,14 @@ const Login = () => {
   const renderForm = () => {
     if (data) {
       return (
-        <p>
+        <p class="py-5">
           Success! You may now head{' '}
           <Link to="/">back to the homepage.</Link>
         </p>
       )
     }
     return (
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={handleFormSubmit} class="py-5">
         <input
           placeholder="Your email"
           name="email"
@@ -72,9 +72,9 @@ const Login = () => {
   };
 
   return (
-    <main>
+    <main class="py-5">
       <h4>Login</h4>
-      <div>
+      <div class="py-5">
         {renderForm()}
         {error && <div>{error.message}</div>}
       </div>
