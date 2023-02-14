@@ -46,7 +46,7 @@ const Profile = () => {
     if (usersLoading) return null;
     // Only renders users who's profile we're not currently viewing
     const notMeUsers = users.filter(o => o._id !== user._id);
-    return <UserList users={notMeUsers} title="User List" />;
+    return <UserList users={notMeUsers} title="Friends List" />;
   };
 
   const renderCurrentUserInfo = () => {
@@ -54,6 +54,9 @@ const Profile = () => {
     return (
       <ul class="py-5">
         <li>username: {user.username}</li>
+        <li>email: {user.email}</li>
+        <li>Pets: {user.listPets}</li>
+        <li>Location: {user.location}</li>
         <li>email: {user.email}</li>
       </ul>
     );

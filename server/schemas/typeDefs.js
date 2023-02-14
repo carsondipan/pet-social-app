@@ -18,7 +18,6 @@ const typeDefs = gql`
     petAge: Int
     petType: String
     petGender: String
-    
   }
   
   type Auth {

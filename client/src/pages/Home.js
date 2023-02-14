@@ -37,7 +37,7 @@ const Home = () => {
   }
 
   return (
-    <main class="py-5">
+    <main class="py-5 px-3">
       <form onSubmit={handleSubmit}>
         <label>Search</label>
         <input
