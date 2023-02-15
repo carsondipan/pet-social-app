@@ -47,7 +47,7 @@ const Signup = () => {
       )
     }
     return (
-      <section class="bg-teal-20 dark:bg-teal-20 h-screen">
+      <section class="bg-teal-20 dark:bg-teal-20 h-min">
         <div class="flex flex-col items-center justify-center mt-3 px-6 py-8 mx-auto md:h-min lg:py-0">
           <Link to="/" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-gray-900">
             <img class="w-12 h-12 mr-2 mt-4" src="./PetbookLogoIcon.png" alt="Petbook Icon" />
