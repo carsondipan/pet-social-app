@@ -20,9 +20,13 @@ const userSchema = new Schema(
       required: true,
       minlength: 5,
     },
-    pet: {
-      type: Schema.Types.ObjectId,
-      ref: 'pet',
+    numberOfPets: {
+      type: Number,
+      required: false,
+    },
+    location: {
+      type: String,
+      required: false,
     },
     ownerName: {
       type: Schema.Types.ObjectId,
