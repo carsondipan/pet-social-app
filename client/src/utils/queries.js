@@ -19,7 +19,13 @@ export const SEARCH_USERS = gql`
     }
   }
 `;
-
+export const QUERY_SINGLE_POST = gql`
+  query singlePost($term: String!) {
+    post(postId: $postId) {
+      
+    }
+  }
+`
 export const QUERY_USER = gql`
   query user($id: ID!) {
     user(id: $id) {
