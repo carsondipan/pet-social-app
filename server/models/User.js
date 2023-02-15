@@ -21,7 +21,7 @@ const userSchema = new Schema(
       minlength: 5,
     },
     numberOfPets: {
-      type: Number,
+      type: Interger,
       required: true,
     },
     location: {
@@ -36,7 +36,7 @@ const userSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "Post",
     }],
-    friends:{
+    friends: {
       type: Number,
       required: false,
       default: 0,

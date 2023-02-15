@@ -84,6 +84,7 @@ const Login = () => {
           </div>
         </div>
       </section>
+      // Please bear with the ugly colors for the moment
     );
   };
 
