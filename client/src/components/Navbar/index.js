@@ -150,7 +150,7 @@ function Navbar() {
               <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
             </button>
             <div class="pl-6 pt-2 relative hidden md:block">
-              <Link to="/me" class="mr-6 text-sm font-medium text-gray-500 dark:text-white">PROFILE INFO</Link>
+              <Link to="/me" class="mr-6 text-sm font-medium text-gray-500 dark:text-white">PROFILE</Link>
               <Link to="/login" class="text-sm font-medium text-blue-600 dark:text-blue-500">Login</Link>
             </div>
 
@@ -164,9 +164,6 @@ function Navbar() {
               <li><a href="" class="hover:text-gray-100">New Posts</a></li>
               <li><a href="" class="hover:text-gray-100">Top Posts</a></li>
               <li><a href="" class="hover:text-gray-100">Users</a></li>
-              <li><a href="" class="hover:text-gray-100">Adopt</a></li>
-              <li><a href="" class="hover:text-gray-100">Lost Pets</a></li>
-              <li><a href="" class="hover:text-gray-100">Donate</a></li>
             </ul>
           </div>
         </div>
