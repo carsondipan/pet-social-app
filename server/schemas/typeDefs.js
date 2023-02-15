@@ -47,19 +47,18 @@ const typeDefs = gql`
     user(id: ID!): User
     searchUsers(term: String!): [User]!
     me: User
-    posts(username:String): [Post]
+    posts(username:String!): [Post]
     post(postID: ID!): Post
   }
 
   type Mutation {
-    addUser(email:String!, username:String!, password:String!): Auth
     login(email:String!, password:String!): Auth
-    addPost(postText: String!, postAuthor: String!): Post
+    addUser(email:String!, username:String!, password:String!): Auth
+    addPost(postText: String!): Post
     addFriend(username: String!, email: String!, password: String!): Auth
     addComment(
       postId: ID!
       commentText: String!
-      commentAuthor: String!
     ): Post
     removePost(postId: ID!): Post
     removeComment(postId: ID!, commentId: ID!): Post

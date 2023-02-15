@@ -77,7 +77,7 @@ const Login = () => {
                 </div>
                 <button type="submit" class="w-full text-white bg-sky-700 hover:bg-teal-400 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button>
                 <p class="text-sm font-light text-teal-300 dark:text-teal-300">
-                  Don’t have an account yet? <a href="/signup" class="font-medium text-primary-500 hover:underline dark:text-primary-500 hover:text-teal-100">Sign up!</a>
+                  Dont have an account yet? <a href="/signup" class="font-medium text-primary-500 hover:underline dark:text-primary-500 hover:text-teal-100">Sign up!</a>
                 </p>
               </form>
             </div>

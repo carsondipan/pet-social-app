@@ -33,7 +33,7 @@ const Profile = () => {
     return <h4 class="py-5">Loading...</h4>;
   }
 
-  if (!user?.username) {
+  if (user?.username) {
     return <Navigate to="/login" replace />;
   }
 

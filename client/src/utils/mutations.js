@@ -26,21 +26,23 @@ export const ADD_USER = gql`
 
 export const ADD_POST = gql`
   mutation addPost($postText: String!) {
-    _id
-    postText
-    postAuthor
-    createdAt
-    comments {
+    addPost(postText: $postText) {
       _id
-      commentText
+      postText
+      postAuthor
+      createdAt
+      comments {
+        _id
+        commentText
+        }
     }
   }
-`
+`;
 
 
 export const ADD_FRIEND = gql`
   mutation addFriend($username: String!, $email: String!, $password: String!) {
-    addFriend(username: $String!, email: $String!, password: $String!) {
+    addFriend(username: $username, email: $email, password: $password) {
       token
       user {
         _id
@@ -51,10 +53,8 @@ export const ADD_FRIEND = gql`
 `;
 
 export const ADD_COMMENT = gql`
-  mutation addComment($postId: ID!,
-    $commentText: string!) {
-      addComment(postId: $postId,
-      commentText: $commentText) {
+  mutation addComment($postId: ID!, $commentText: String!) {
+      addComment(postId: $postId, commentText: $commentText) {
         _id
         postText
         postAuthor
@@ -66,5 +66,4 @@ export const ADD_COMMENT = gql`
         }
       }
     }
-  )
-`
+`;
