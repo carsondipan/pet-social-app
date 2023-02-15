@@ -9,6 +9,8 @@ const typeDefs = gql`
     numberOfPets: Int
     location: String
     listPets: [Pet]
+    posts: String
+    friends: Int
 
   }
 

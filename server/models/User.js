@@ -28,18 +28,18 @@ const userSchema = new Schema(
       type: String,
       required: false,
     },
-    ownerName: {
+    listPets: [{
       type: Schema.Types.ObjectId,
-      ref: "username",
-    },
+      ref: "Pet",
+    }],
     posts: [{
       type: Schema.Types.ObjectId,
       ref: "Post",
     }],
-    friends: [{
-      type: Schema.Types.ObjectId,
-      ref: "User",
-    }],
+    friends:{
+      type: Number,
+      required: false,
+    },
   },
   {
     toJSON: {
