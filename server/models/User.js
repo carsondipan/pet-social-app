@@ -21,8 +21,8 @@ const userSchema = new Schema(
       minlength: 5,
     },
     numberOfPets: {
-      type: Interger,
-      required: true,
+      type: Number,
+      required: false,
     },
     location: {
       type: String,
