@@ -22,7 +22,7 @@ const userSchema = new Schema(
     },
     numberOfPets: {
       type: Number,
-      required: false,
+      required: true,
     },
     location: {
       type: String,
@@ -39,6 +39,7 @@ const userSchema = new Schema(
     friends:{
       type: Number,
       required: false,
+      default: 0,
     },
   },
   {
