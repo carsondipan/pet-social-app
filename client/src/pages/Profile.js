@@ -34,7 +34,7 @@ const Profile = () => {
   }
 
   if (user?.username) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/user:id" replace />;
   }
 
   const renderUserList = () => {
