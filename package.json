@@ -16,7 +16,7 @@
     "license": "ISC",
     "devDependencies": {
         "concurrently": "^7.6.0",
-        "nodemon": "^2.0.3",
+        "nodemon": "^2.0.20",
         "tailwindcss": "^3.2.6"
     },
     "dependencies": {
