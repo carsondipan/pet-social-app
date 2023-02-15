@@ -1,12 +1,10 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import { useState } from "react";
 
 import Auth from '../../utils/auth';
 
 function Navbar() {
-  const [navbar, setNavbar] = useState(false);
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
