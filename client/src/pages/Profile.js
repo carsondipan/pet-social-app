@@ -34,12 +34,7 @@ const Profile = () => {
   }
 
   if (!user?.username) {
-    return (
-      <h4 class="py-5">
-        You need to be logged in to see this. Use the navigation links above to
-        sign up or log in!
-      </h4>
-    );
+    return <Navigate to="/login" replace />;
   }
 
   const renderUserList = () => {
@@ -52,7 +47,7 @@ const Profile = () => {
   const renderCurrentUserInfo = () => {
     if (id) return null;
     return (
-      <ul class="py-5">
+      <ul class="py-5 h-screen">
         <li>username: {user.username}</li>
         <li>email: {user.email}</li>
         <li>Pets: {user.listPets}</li>

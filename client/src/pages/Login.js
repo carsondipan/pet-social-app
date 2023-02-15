@@ -49,35 +49,35 @@ const Login = () => {
       )
     }
     return (
-      <section class="bg-gray-50 dark:bg-gray-100">
-        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-          <Link to="/" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-gray-900">
-            <img class="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo" />
-            Petbook
+      <section class="bg-teal-20 dark:bg-teal-20">
+        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-min lg:py-0">
+          <Link to="/" class="flex items-center mb-6 text-2xl font-semibold text-teal-900 dark:text-teal-900">
+            <img class="w-12 h-12 mr-2 mt-4" src="./PetbookLogoIcon.png" alt="Petbook Icon" />
           </Link>
-          <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+          <div class="w-full bg-white rounded-lg shadow dark:border mb-4 md:mt-0 sm:max-w-md xl:p-0 dark:bg-teal-600 dark:border-teal-700">
             <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-              <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+              <h1 class="text-xl font-bold leading-tight tracking-tight text-teal-900 md:text-2xl dark:text-white">
                 Sign in to your account
               </h1>
               <form onSubmit={handleFormSubmit} class="space-y-4 md:space-y-6" action="#">
                 <div>
-                  <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your username</label>
+                  <label for="email" class="block mb-2 text-sm font-medium text-teal-900 dark:text-white">Your email</label>
                   <input type="email" name="email" id="email"
                     value={formState.email}
                     onChange={handleChange}
-                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="true" />
+                    class="bg-teal-50 border border-teal-300 text-teal-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-teal-200 dark:border-teal-600 dark:placeholder-teal-500 dark:text-teal-900 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="true" />
                 </div>
                 <div>
-                  <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                  <label for="password" class="block mb-2 text-sm font-medium text-teal-900 dark:text-white">Password</label>
                   <input type="password" name="password" id="password"
                     value={formState.password}
                     onChange={handleChange}
-                    placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="true" />
+                    placeholder="••••••••"
+                    class="bg-teal-50 border border-teal-300 text-teal-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-teal-200 dark:border-teal-600 dark:placeholder-teal-500 dark:text-teal-900 dark:focus:ring-blue-500 dark:focus:border-blue-500" required="true" />
                 </div>
-                <button type="submit" class="w-full text-white bg-gray-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign in</button>
-                <p class="text-sm font-light text-gray-300 dark:text-gray-400">
-                  Don’t have an account yet? <a href="/signup" class="font-medium text-primary-100 hover:underline dark:text-primary-500">Sign up!</a>
+                <button type="submit" class="w-full text-white bg-sky-700 hover:bg-teal-400 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign in</button>
+                <p class="text-sm font-light text-teal-200 dark:text-teal-300">
+                  Don’t have an account yet? <a href="/signup" class="font-medium text-primary-100 hover:underline dark:text-primary-500 hover:text-teal-100">Sign up!</a>
                 </p>
               </form>
             </div>
