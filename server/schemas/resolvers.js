@@ -4,6 +4,14 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
+    user: async () => {
+      return await User.find({}).populate('listPets').
+      populate({
+        path: 'listPets',
+        populate: 'user'
+      })
+    },
+
     searchUsers: async (_parent, args) => {
       const search = args.term;
       const rgx = (pattern) => new RegExp(`.*${pattern}.*`);
