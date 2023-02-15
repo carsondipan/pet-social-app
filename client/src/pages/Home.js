@@ -74,29 +74,22 @@ const Home = () => {
                 >
                     <div class="max-w-xl text-center sm:text-left">
                         <h1 class="text-3xl font-extrabold sm:text-5xl">
-                            Let us find your
+                            Welcome to
 
                             <strong class="block font-extrabold text-teal-700">
-                                Forever Home.
+                                Petbook.
                             </strong>
                         </h1>
 
                         <p class="mt-4 max-w-lg sm:text-xl sm:leading-relaxed">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo
-                            tenetur fuga ducimus numquam ea!
+                            Everyone wants their pets to be an internet star. On Petbook, that dream is a reality.
                         </p>
 
                         <div class="mt-8 flex flex-wrap gap-4 text-center">
-                            <Link to="/signup"
+                            <Link to="/posts"
                                 class="block w-full rounded bg-sky-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-sky-700 focus:outline-none focus:ring active:bg-sky-500 sm:w-auto"
                             >
-                                Signup
-                            </Link>
-
-                            <Link to="/login"
-                                class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-cyan-600 shadow hover:bg-cyan-400 hover:text-white focus:outline-none focus:ring active:text-cyan-500 sm:w-auto"
-                            >
-                                Login
+                                Check out our posts
                             </Link>
                         </div>
                     </div>
@@ -116,10 +109,10 @@ const Home = () => {
                             </p>
                         </div>
 
-                        <Link to="/signup"
+                        <Link to="/posts"
                             class="mt-8 inline-flex flex-shrink-0 items-center rounded-full border border-teal-600 px-5 py-3 font-medium text-teal-600 hover:bg-teal-600 hover:text-white sm:mt-0 lg:mt-8"
                         >
-                            Sign up to join in
+                            See what the hype is about
 
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
