@@ -10,40 +10,50 @@ const likeSchema = new Schema(
     },
 );
 
-const postSchema = new Schema(
-    {
-        postText: {
+const postSchema = new Schema({
+    postText: {
+        type: String,
+        unique: true,
+        required: "post or we riot!",
+        minlength: 1,
+        maxlength: 280,
+        trim: true,
+    },
+    postAuthor: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+        get: (timestamp) => dateFormat(timestamp),
+    },
+    comments: [
+        {
+          commentText: {
             type: String,
-            unique: true,
-            required: "post or we riot!",
+            required: true,
             minlength: 1,
             maxlength: 280,
-            trim: true,
-        },
-        createdAt: {
+          },
+          commentAuthor: {
+            type: String,
+            required: true,
+          },
+          createdAt: {
             type: Date,
             default: Date.now,
             get: (timestamp) => dateFormat(timestamp),
+          },
         },
-        username: {
-            type: String,
-            required: true,
-        },
-        likes: [likeSchema],
-    },
-    {
-        toJSON: {
-            virtuals: true,
-            getters: true,
-        },
-        id: false,
-    }
-);
+      ],
+    });
 
 postSchema.virtual("likeCount").get(function () {
     return this.length;
 });
 
-const Post = model('post', postSchema);
+const Post = model('Post', postSchema);
 
 module.exports = Post;
