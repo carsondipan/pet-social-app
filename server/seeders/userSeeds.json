@@ -38,6 +38,46 @@
     "location": "Dancing",
     "numberOfPets": "23",
     "listPets": []
+  },
+  {
+    "username": "Mikey",
+    "email": "mikey@gmail.com",
+    "password": "password1234",
+    "location": "Riding",
+    "numberOfPets": "4",
+    "listPets": []
+  },
+  {
+    "username": "Codey",
+    "email": "codey@gmail.com",
+    "password": "password1234",
+    "location": "Cooking",
+    "numberOfPets": "4",
+    "listPets": []
+  },
+  {
+    "username": "Brooke",
+    "email": "brooke@gmail.com",
+    "password": "password1234",
+    "location": "talking",
+    "numberOfPets": "23",
+    "listPets": []
+  },
+  {
+    "username": "Blake",
+    "email": "blake@gmail.com",
+    "password": "password1234",
+    "location": "Gaming",
+    "numberOfPets": "4",
+    "listPets": []
+  },
+  {
+    "username": "Sadie",
+    "email": "sadie@gmail.com",
+    "password": "password1234",
+    "location": "Sleeping",
+    "numberOfPets": "1",
+    "listPets": []
   }
 ]
 
