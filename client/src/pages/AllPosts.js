@@ -6,67 +6,13 @@ import { Navigate, useParams } from 'react-router-dom';
 
 // Utilities
 import { QUERY_USERS, QUERY_USER, QUERY_ME, QUERY_POSTS, ADD_POST } from '../utils/queries';
-import Auth from '../../utils/auth';
+
 
 // Components
 
 
 const AllPosts = () => {
-    if (!user?.username) {
-        return <Navigate to="/login" replace />
-    }
 
-    const [postText, setPostText] = useState('');
-
-    const [characterCount, setCharacterCount] = useState(0);
-
-    const [addPost, { error }] = useMutation(ADD_POST, {
-        update(cache, { data: { addPost } }) {
-            try {
-                const { posts } = cache.readQuery({ query: QUERY_POSTS });
-
-                cache.writeQuery({
-                    query: QUERY_POSTS,
-                    data: { posts: [addPost, ...posts] },
-                });
-            } catch (e) {
-                console.error(e);
-            }
-
-            // update me object's cache
-            const { me } = cache.readQuery({ query: QUERY_ME });
-            cache.writeQuery({
-                query: QUERY_ME,
-                data: { me: { ...me, posts: [...me.posts, addPost] } },
-            });
-        },
-    });
-
-    const handleFormSubmit = async (event) => {
-        event.preventDefault();
-
-        try {
-            const { data } = await addPost({
-                variables: {
-                    postText,
-                    postAuthor: Auth.getProfile().data.username,
-                },
-            });
-
-            setPostText('');
-        } catch (err) {
-            console.error(err);
-        }
-    };
-
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-
-        if (name === 'postText' && value.length <= 280) {
-            setPostText(value);
-            setCharacterCount(value.length);
-        }
-    };
 
     return (
         <body class="bg-teal-20">
@@ -117,8 +63,7 @@ const AllPosts = () => {
                                         name="postText"
                                         placeholder="Please, leave us a post..."
                                         type="text"
-                                        value={postText}
-                                        onChange={handleChange}
+
                                         class="w-full ml-2 focus:outline-none bg-transparent border-0 focus:border-0 focus:ring-0"
                                     />
                                 </div>
