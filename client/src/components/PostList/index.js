@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const PostList = () => {
+const Post = ({ _id, postText, postAuthor }) => {
     return (
         <div
             class="bg-white rounded-lg shadow border-b border-gray-300"
@@ -14,7 +13,7 @@ const PostList = () => {
                         class="rounded-full h-10 w-10"
                         src="https://images.unsplash.com/photo-1506863530036-1efeddceb993?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&h=200&q=80"
                     />
-                    <div class="ml-2">USERNAME</div>
+                    <div class="ml-2">{postAuthor}</div>
                 </div>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +36,7 @@ const PostList = () => {
                     class="w-full cursor-pointer"
                     src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
                 />
-                <p class="p-6 text-gray-700">Danish pie soufflé sugar plum topping. Sesame snaps pie toffee dragée chocolate bar lollipop halvah. Chocolate bar pastry toffee muffin donut.</p>
+                <p class="p-6 text-gray-700">{postText}</p>
             </div>
 
             <div
@@ -97,20 +96,19 @@ const PostList = () => {
     );
 };
 
-// const UserList = ({ users, title }) => {
-//   if (!users.length) return <h3>No Users</h3>;
+const PostList = ({ posts }) => {
+    if (!posts.length) return <h3>No posts</h3>;
 
-//   const renderUsers = () => {
-//     if (!users) return null;
-//     return users.map(user => <User key={user._id} {...user} />);
-//   }
+    const renderPosts = () => {
+        if (!posts) return null;
+        return posts.map(post => <Post key={post._id} {...post} />);
+    }
 
-//   return (
-//     <>
-//       <h3>{title}</h3>
-//       {renderUsers()}
-//     </>
-//   );
-// };
+    return (
+        <>
+            {renderPosts()}
+        </>
+    );
+};
 
 export default PostList;
