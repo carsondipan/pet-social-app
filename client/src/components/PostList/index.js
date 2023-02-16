@@ -104,6 +104,7 @@ const Post = ({ _id, postText, username }) => {
             class="w-full cursor-pointer"
             // src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
             src="https://placedog.net/600/480?r"
+          // Random dogs
           />
         </div>
         <p class="tex-gray-600 p-6">{postText}</p>
