@@ -37,9 +37,9 @@ const AllUsers = () => {
         return <UserList users={users} />
     }
 
-    if (!user?.username) {
-        return <Navigate to="/login" replace />
-    }
+    // if (!user?.username) {
+    //     return <Navigate to="/login" replace />
+    // }
 
     const renderUserList = () => {
         if (usersLoading) return null;
