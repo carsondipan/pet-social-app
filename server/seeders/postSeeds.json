@@ -5,18 +5,23 @@
         "userId": "63ebca2321cee69307d82beb"
     },
     {
-        "postText": "What da dog doin?????????",
-        "username": "testuser",
-        "userId": "63ebca2321cee69307d82beb"
+        "postText": "Da dog is doin stuff",
+        "username": "RobertPaulson",
+        "userId": ""
     },
         {
-        "postText": "What da dog doin?????????",
-        "username": "testuser",
-        "userId": "63ebca2321cee69307d82beb"
+        "postText": "What da cat doin?",
+        "username": "DonFagen",
+        "userId": ""
     },
     {
-        "postText": "What da dog doin?????????",
-        "username": "testuser",
-        "userId": "63ebca2321cee69307d82beb"
+        "postText": "Cat's doin stuff",
+        "username": "WaltBecker",
+        "userId": ""
+    },
+    {
+        "postText": "Test Post",
+        "username": "",
+        "userId": ""
     }
 ]
