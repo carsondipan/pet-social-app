@@ -24,7 +24,7 @@ const AllPosts = () => {
           ) : (
             <PostList
               posts={posts}
-              title="Some Feed for Thought(s)..."
+              title="Comments:"
             />
           )}
         </div>
