@@ -1,17 +1,17 @@
 [
     {
-        "postText": "What da dog doin?????????",
+        "postText": "Check out how cute my dog is today! Isn't she lovely?",
         "postAuthor": "testuser",
         "userId": "63ebca2321cee69307d82beb"
     },
     {
-        "postText": "Da dog is doin stuff",
-        "postAuthor": "RobertPaulson",
-        "userId": ""
+        "postText": "Any tips to help a dog barking?",
+        "postAuthor": "testuser",
+        "userId": "63ebca2321cee69307d82beb"
     },
     {
-        "postText": "What da cat doin?",
-        "postAuthor": "DonFagen",
-        "userId": ""
+        "postText": "My dog is headed off to the groomers later - thank goodness, she stinks!",
+        "postAuthor": "testuser",
+        "userId": "63ebca2321cee69307d82beb"
     }
 ]
