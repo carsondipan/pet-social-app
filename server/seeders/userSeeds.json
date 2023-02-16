@@ -8,101 +8,36 @@
     "listPets": []
   },
   {
-    "username": "testuser",
-    "email": "test@user.com",
+    "username": "RobertPaulson",
+    "email": "fightclub@gmail.com",
     "password": "password1234",
-    "location": "hell",
-    "numberOfPets": "420",
+    "location": "City",
+    "numberOfPets": "3",
     "listPets": []
   },
   {
-    "username": "testuser",
-    "email": "test@user.com",
+    "username": "DonFagen",
+    "email": "steelyDan1@gmail.com",
     "password": "password1234",
-    "location": "hell",
-    "numberOfPets": "420",
+    "location": "New York City",
+    "numberOfPets": "2",
     "listPets": []
   },
   {
-    "username": "testuser",
-    "email": "test@user.com",
+    "username": "WaltBecker",
+    "email": "steelyDan2@gmail.com",
     "password": "password1234",
-    "location": "hell",
-    "numberOfPets": "420",
+    "location": "Hawaii",
+    "numberOfPets": "1",
     "listPets": []
   },
   {
-    "username": "testuser",
-    "email": "test@user.com",
+    "username": "Gaucho",
+    "email": "gaucho@gmail.com",
     "password": "password1234",
-    "location": "hell",
-    "numberOfPets": "420",
-    "listPets": []
-  },
-  {
-    "username": "testuser",
-    "email": "test@user.com",
-    "password": "password1234",
-    "location": "hell",
-    "numberOfPets": "420",
-    "listPets": []
-  },
-  {
-    "username": "testuser",
-    "email": "test@user.com",
-    "password": "password1234",
-    "location": "hell",
-    "numberOfPets": "420",
-    "listPets": []
-  },
-  {
-    "username": "testuser",
-    "email": "test@user.com",
-    "password": "password1234",
-    "location": "hell",
-    "numberOfPets": "420",
-    "listPets": []
-  },
-  {
-    "username": "testuser",
-    "email": "test@user.com",
-    "password": "password1234",
-    "location": "hell",
-    "numberOfPets": "420",
-    "listPets": []
-  },
-  {
-    "username": "testuser",
-    "email": "test@user.com",
-    "password": "password1234",
-    "location": "hell",
-    "numberOfPets": "420",
-    "listPets": []
-  },
-  {
-    "username": "testuser",
-    "email": "test@user.com",
-    "password": "password1234",
-    "location": "hell",
-    "numberOfPets": "420",
-    "listPets": []
-  },
-  {
-    "username": "testuser",
-    "email": "test@user.com",
-    "password": "password1234",
-    "location": "hell",
-    "numberOfPets": "420",
-    "listPets": []
-  },
-  {
-    "username": "testuser",
-    "email": "test@user.com",
-    "password": "password1234",
-    "location": "hell",
-    "numberOfPets": "420",
+    "location": "Dancing",
+    "numberOfPets": "23",
     "listPets": []
   }
-
 ]
 
