@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SingleProfile = ({ _id, username, location, numberOfPets }) => {
+const Profile = ({ _id, username, location, numberOfPets }) => {
   return (
     <div key={_id}>
       <div class="p-16 bg-teal-50">
@@ -74,4 +74,4 @@ const SingleProfile = ({ _id, username, location, numberOfPets }) => {
 //     );
 // };
 
-export default SingleProfile;
+export default Profile;
