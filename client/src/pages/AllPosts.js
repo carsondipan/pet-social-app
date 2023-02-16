@@ -40,7 +40,7 @@ const AllPosts = () => {
 
 
 
-    <body class="bg-teal-20 min-h-screen h-fit">
+    <body class="bg-teal-50 min-h-screen h-fit">
       {/* Left tabs */}
       <div
         class="px-4 py-5 mx-auto sm:max-w-2xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
