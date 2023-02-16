@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const User = ({ _id, username }) => {
+const User = ({ _id, username, location, numberOfPets }) => {
   return (
     <div key={_id}>
       <Link to={`/users/${_id}`}
@@ -17,16 +17,16 @@ const User = ({ _id, username }) => {
               {username}
             </h3>
 
-            <p class="mt-1 text-xs font-medium text-gray-600">LOCATION</p>
-            <p class="mt-1 text-xs font-medium text-gray-600">I have # pets.</p>
+            <p class="mt-1 text-xs font-medium text-gray-600">{location}</p>
+            <p class="mt-1 text-xs font-medium text-gray-600">I have {numberOfPets} pets.</p>
           </div>
 
           <div class="ml-3 hidden flex-shrink-0 sm:block">
-            <img
+            {/* <img
               alt="Profile Image"
               src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
               class="h-16 w-16 rounded-lg object-cover shadow-sm"
-            />
+            /> */}
           </div>
         </div>
       </Link>

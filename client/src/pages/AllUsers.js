@@ -37,6 +37,10 @@ const AllUsers = () => {
         return <UserList users={users} />
     }
 
+    if (!user?.username) {
+        return <Navigate to="/login" replace />
+    }
+
     const renderUserList = () => {
         if (usersLoading) return null;
         // Only renders users who's profile we're not currently viewing
