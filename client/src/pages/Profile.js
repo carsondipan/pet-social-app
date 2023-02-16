@@ -6,7 +6,7 @@ import { useQuery } from '@apollo/client';
 import Auth from '../utils/auth';
 import { QUERY_USERS, QUERY_USER, QUERY_ME } from '../utils/queries';
 // Components
-import UserList from '../components/UserList';
+import SingleProfile from '../components/SingleProfile';
 
 const Profile = () => {
   const { id } = useParams();
@@ -37,13 +37,6 @@ const Profile = () => {
     return <Navigate to="/user:id" replace />;
   }
 
-  const renderUserList = () => {
-    if (usersLoading) return null;
-    // Only renders users who's profile we're not currently viewing
-    const notMeUsers = users.filter(o => o._id !== user._id);
-    return <UserList users={notMeUsers} title="Friends List" />;
-  };
-
   const renderCurrentUserInfo = () => {
     if (id) return null;
     return (
@@ -60,18 +53,7 @@ const Profile = () => {
   return (
     <div class="py-5">
       <div>
-        {/* <h2>
-          Viewing {id ? `${user.username}'s` : 'your'} profile.
-        </h2> */}
         {renderCurrentUserInfo()}
-        {/* {renderUserList()} */}
-        {/* <input
-          placeholder="All Pets"
-          name="listPets"
-          type="listPets"
-          value={formState.listPets}
-          onChange={handleChange}
-        /> */}
       </div>
 
       <div class="p-16 bg-teal-50">
