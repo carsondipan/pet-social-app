@@ -90,7 +90,7 @@ const Signup = () => {
                 </div>
                 <div>
                   <label for="numberOfPets" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">How many pets do you have?</label>
-                  <input type="numberOfPets" name="numberofPets" id="numberOfPets"
+                  <input type="numberOfPets" name="numberOfPets" id="numberOfPets"
                     value={formState.numberOfPets}
                     onChange={handleChange}
                     class="bg-teal-50 border border-teal-600 text-teal-900 placeholder-teal-500 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-teal-50 dark:border-teal-600 dark:placeholder-teal-500 dark:text-teal-900 dark:focus:ring-blue-600 dark:focus:border-blue-600" placeholder="number of pets" required="true" />

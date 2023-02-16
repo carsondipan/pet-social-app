@@ -17,25 +17,25 @@ const PostForm = () => {
 
 
   const [addPost, { error, data }] = useMutation(ADD_POST, {
-    update(cache, { data: { addPost } }) {
-      try {
-        const { posts } = cache.readQuery({ query: QUERY_POSTS });
+    // update(cache, { data: { addPost } }) {
+    //   try {
+    //     const { posts } = cache.readQuery({ query: QUERY_POSTS });
 
-        cache.writeQuery({
-          query: QUERY_POSTS,
-          data: { posts: [addPost, ...posts] },
-        });
-      } catch (e) {
-        console.error(e);
-      }
+    //     cache.writeQuery({
+    //       query: QUERY_POSTS,
+    //       data: { posts: [addPost, ...posts] },
+    //     });
+    //   } catch (e) {
+    //     console.error(e);
+    //   }
 
-      // update me object's cache
-      const { me } = cache.readQuery({ query: QUERY_ME });
-      cache.writeQuery({
-        query: QUERY_ME,
-        data: { me: { ...me, posts: [...me.posts, addPost] } },
-      });
-    },
+    //   // update me object's cache
+    //   const { me } = cache.readQuery({ query: QUERY_ME });
+    //   cache.writeQuery({
+    //     query: QUERY_ME,
+    //     data: { me: { ...me, posts: [...me.posts, addPost] } },
+    //   });
+    // },
   });
 
   const handleFormSubmit = async (event) => {
@@ -44,7 +44,7 @@ const PostForm = () => {
     try {
       const { data } = await addPost({
         variables: {
-          postText,
+          postText: formState.postText,
           postAuthor: Auth.getProfile().data.username,
         },
       });
@@ -91,13 +91,17 @@ const PostForm = () => {
                 </svg>
                 <form onSubmit={handleFormSubmit} class="w-full">
                   <textarea
+                    name="postText"
                     placeholder="Write something..."
                     type="text"
                     rows="3"
                     onChange={handleChange}
                     value={formState.postText}
-                    class="form-input bg-gray-200 min-w-full ml-2 focus:outline-none bg-transparent border-0 focus:border-0 focus:ring-0"
+                    class="form-input min-w-full ml-2 focus:outline-none bg-transparent border-0 focus:border-0 focus:ring-0"
                   />
+                  <div class="flex flex-col items-center">
+                    <button type="submit" class="bg-teal-500 hover:bg-teal-700 text-white font-bold mt-2 py-2 px-4 rounded">Add Post</button>
+                  </div>
                 </form>
               </div>
             </div>
@@ -145,9 +149,6 @@ const PostForm = () => {
                 </div>
               </div>
             </div> */}
-            <div class="flex flex-col items-center">
-              <button type="submit" class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">Add Post</button>
-            </div>
           </div>
           {error && (
             <div className="col-12 my-3 bg-danger text-teal-600 p-3">

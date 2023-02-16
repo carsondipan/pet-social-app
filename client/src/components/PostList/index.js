@@ -66,7 +66,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Post = ({ _id, posts, title, showTitle = true, showUsername = true, }) => {
+const Post = ({ _id, postText, username }) => {
   return (
     <div key={_id}>
       <div
@@ -81,7 +81,7 @@ const Post = ({ _id, posts, title, showTitle = true, showUsername = true, }) => 
               src="../avatar.jpeg"
             />
             {/* USERNAME */}
-            <div class="ml-2">USERNAME</div>
+            <div class="ml-2">{username}</div>
           </div>
           {/* <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +106,7 @@ const Post = ({ _id, posts, title, showTitle = true, showUsername = true, }) => 
             src="https://placedog.net/600/480?r"
           />
         </div>
-        <p class="tex-gray-700 p-6">Here's what post text looks like.</p>
+        <p class="tex-gray-600 p-6">{postText}</p>
 
         <div
           class="px-6 py-6  flex justify-between items-center"
