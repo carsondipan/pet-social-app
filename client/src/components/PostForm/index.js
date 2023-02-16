@@ -66,6 +66,10 @@ const PostForm = () => {
 
   return (
     <div>
+<<<<<<< HEAD
+=======
+      <h3>PetPosting happens here!</h3>
+>>>>>>> ee90d8b00667ac027f49447b1148e589151ceef0
 
       {Auth.loggedIn() ? (
         <>
