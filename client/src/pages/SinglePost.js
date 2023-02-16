@@ -37,7 +37,7 @@ const SinglePost = () => {
                         lineHeight: '1.5',
                     }}post
                 >
-                    {post.thoughtText}
+                    {post.postText}
                 </blockquote>
             </div>
 
