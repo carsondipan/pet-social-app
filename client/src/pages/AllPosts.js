@@ -61,17 +61,13 @@ const AllPosts = () => {
             </div> */}
           </div>
 
-          {/* Center tabs */}
+          {/* Centered tabs */}
           <div class="col-span-12 lg:col-span-6 space-y-5">
             {/* New posts */}
             <PostForm />
             {/* Existing posts */}
             <PostList
               posts={posts}
-<<<<<<< HEAD
-=======
-              title="Comments:"
->>>>>>> ee90d8b00667ac027f49447b1148e589151ceef0
             />
           </div>
 
