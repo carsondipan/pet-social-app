@@ -93,7 +93,7 @@ const resolvers = {
       return post;
     },
     addComment: async (parent, { postId, commentText, commentAuthor }) => {
-      return Post.findOneAndUpdate(
+      return Post.foneOneAndUpdate(
         { _id: postId },
         {
           $addToSet: { comments: { commentText, commentAuthor } },
