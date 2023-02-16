@@ -61,7 +61,7 @@ const AllPosts = () => {
             </div> */}
           </div>
 
-          {/* Center tabs */}
+          {/* Centered tabs */}
           <div class="col-span-12 lg:col-span-6 space-y-5">
             {/* New posts */}
             <PostForm />
