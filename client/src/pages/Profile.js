@@ -20,7 +20,6 @@ const Profile = () => {
   const { usersLoading, data: usersData } = useQuery(QUERY_USERS);
 
   const user = data?.me || data?.user || {};
-  const users = usersData?.users || [];
 
   if (error) console.log(error);
 
@@ -37,9 +36,11 @@ const Profile = () => {
     return <Navigate to="/users/:id" replace />;
   }
 
+  console.log(user);
+
   const renderProfile = () => {
     if (usersLoading) return null;
-    return <SingleProfile />;
+    return <SingleProfile username={user.username} />;
   };
 
   const renderCurrentUserInfo = () => {

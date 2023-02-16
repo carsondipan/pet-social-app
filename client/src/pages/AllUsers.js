@@ -49,7 +49,7 @@ const AllUsers = () => {
     };
 
     return (
-        <div class="py-5">
+        <div class="py-5 bg-teal-50">
             {renderUserList()}
         </div>
     );

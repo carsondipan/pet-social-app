@@ -17,10 +17,10 @@ const SinglePost = () => {
     const post = data?.post || {};
 
     if (loading) {
-        return <div>AHHHHHH I'M TOO SLOW TO LOAD</div>;
+        return <div>Loading ...</div>;
     }
     return (
-        <div className="my-3">
+        <div className="my-3 h-screen">
             <h3 className="card-header bg-dark text-light p-2 m-0">
                 {post.postAuthor} <br />
                 <span style={{ fontSize: '1rem' }}>
@@ -35,7 +35,7 @@ const SinglePost = () => {
                         fontStyle: 'italic',
                         border: '2px dotted #1a1a1a',
                         lineHeight: '1.5',
-                    }}post
+                    }} post
                 >
                     {post.postText}
                 </blockquote>
