@@ -9,44 +9,9 @@
         "postAuthor": "RobertPaulson",
         "userId": ""
     },
-        {
+    {
         "postText": "What da cat doin?",
         "postAuthor": "DonFagen",
-        "userId": ""
-    },
-    {
-        "postText": "Cat's doin stuff",
-        "username": "WaltBecker",
-        "userId": ""
-    },
-    {
-        "postText": "Test Post",
-        "username": "",
-        "userId": ""
-    },
-    {
-        "postText": "Who let tha dogs out",
-        "username": "WhoWho",
-        "userId": ""
-    },
-    {
-        "postText": "What did the horse whip",
-        "username": "NayNay",
-        "userId": ""
-    },
-    {
-        "postText": "Tell me a good joke",
-        "username": "JustGoosin",
-        "userId": ""
-    },
-    {
-        "postText": "Where the pools at",
-        "username": "SwimmingGolden",
-        "userId": ""
-    },
-    {
-        "postText": "What is the bestest toy",
-        "username": "JollyBall",
         "userId": ""
     }
 ]
