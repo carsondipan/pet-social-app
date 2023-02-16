@@ -82,15 +82,21 @@ const resolvers = {
 
       return { token, user };
     },
-    addPost: async (parent, { postText, postAuthor }) => {
-      const post = await Post.create({ postText, postAuthor });
+    addPost: async (parent, { postText }, context) => {
+      if (context.user) {
+        const post = await Post.create({
+          postText,
+          postAuthor: context.user.username,
+        });
 
-      await User.findOneAndUpdate(
-        { username: postAuthor },
-        { $addToSet: { posts: post._id } }
-      );
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { posts: post._id } }
+        );
 
-      return post;
+        return post;
+      }
+      throw new AuthenticationError('You need to be logged in!');
     },
     addComment: async (parent, { postId, commentText, commentAuthor }) => {
       return Post.foneOneAndUpdate(
