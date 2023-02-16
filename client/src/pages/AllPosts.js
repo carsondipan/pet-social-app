@@ -2,26 +2,26 @@
 import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { useMutation } from '@apollo/client';
-import { Navigate, useParams } from 'react-router-dom';
 
 // Utilities
-import { QUERY_USERS, QUERY_USER, QUERY_ME, QUERY_POSTS, ADD_POST } from '../utils/queries';
-
+import { QUERY_POSTS } from '../utils/queries';
 
 // Components
 import PostForm from '../components/PostForm';
 import PostList from '../components/PostList';
 
-
-
 const AllPosts = () => {
+
+    // Get a list of all posts
+    const { data } = useQuery(QUERY_POSTS);
+    const posts = data?.posts || [];
 
     const renderPostForm = () => {
         return <PostForm />;
     };
 
     const renderPostList = () => {
-        return <PostList />;
+        return <PostList posts={posts} />;
     };
 
 
