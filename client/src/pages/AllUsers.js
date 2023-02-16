@@ -30,7 +30,7 @@ const AllUsers = () => {
     }
 
     if (loading) {
-        return <h4 class="py-5">Loading...</h4>;
+        return <h4 class="py-5 h-screen">Loading...</h4>;
     }
 
     if (user?.username) {
@@ -49,7 +49,7 @@ const AllUsers = () => {
     };
 
     return (
-        <div class="py-5 bg-teal-50">
+        <div class="py-5 bg-teal-50 min-h-screen">
             {renderUserList()}
         </div>
     );

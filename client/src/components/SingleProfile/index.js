@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Profile = ({ _id, username, location, numberOfPets }) => {
+const SingleProfile = ({ _id, username, location, numberOfPets }) => {
   return (
     <div key={_id}>
       <div class="p-16 bg-teal-50">
@@ -24,9 +24,7 @@ const Profile = ({ _id, username, location, numberOfPets }) => {
             </div>
             <div class="relative">
               <div class="w-48 h-48 bg-indigo-100 mx-auto rounded-full shadow-2xl absolute inset-x-0 top-0 -mt-24 flex items-center justify-center text-indigo-500">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-                </svg>
+                <img src="../avatar.jpeg" class="rounded-full" />
               </div>
             </div>
 
@@ -63,7 +61,7 @@ const Profile = ({ _id, username, location, numberOfPets }) => {
   );
 };
 
-// const ProfilePage = ({ users }) => {
+// const ProfilePage = ({users}) => {
 //     const renderProfile = () => {
 //         if (!users) return null;
 //         return User.map(user => <User key={user._id} {...user} />);
@@ -76,4 +74,4 @@ const Profile = ({ _id, username, location, numberOfPets }) => {
 //     );
 // };
 
-export default Profile;
+export default SingleProfile;
