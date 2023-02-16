@@ -3,15 +3,15 @@
     "username": "testuser",
     "email": "test@user.com",
     "password": "password1234",
-    "location": "hell",
-    "numberOfPets": "420",
+    "location": "Charlotte",
+    "numberOfPets": "4",
     "listPets": []
   },
   {
     "username": "RobertPaulson",
     "email": "fightclub@gmail.com",
     "password": "password1234",
-    "location": "City",
+    "location": "Townsville",
     "numberOfPets": "3",
     "listPets": []
   },
@@ -35,15 +35,15 @@
     "username": "Gaucho",
     "email": "gaucho@gmail.com",
     "password": "password1234",
-    "location": "Dancing",
-    "numberOfPets": "23",
+    "location": "Miami",
+    "numberOfPets": "2",
     "listPets": []
   },
   {
     "username": "Mikey",
     "email": "mikey@gmail.com",
     "password": "password1234",
-    "location": "Riding",
+    "location": "Las Vegas",
     "numberOfPets": "4",
     "listPets": []
   },
@@ -51,7 +51,7 @@
     "username": "Codey",
     "email": "codey@gmail.com",
     "password": "password1234",
-    "location": "Cooking",
+    "location": "California",
     "numberOfPets": "4",
     "listPets": []
   },
@@ -59,15 +59,15 @@
     "username": "Brooke",
     "email": "brooke@gmail.com",
     "password": "password1234",
-    "location": "talking",
-    "numberOfPets": "23",
+    "location": "Gotham",
+    "numberOfPets": "3",
     "listPets": []
   },
   {
     "username": "Blake",
     "email": "blake@gmail.com",
     "password": "password1234",
-    "location": "Gaming",
+    "location": "Winterfell",
     "numberOfPets": "4",
     "listPets": []
   },
@@ -75,9 +75,8 @@
     "username": "Sadie",
     "email": "sadie@gmail.com",
     "password": "password1234",
-    "location": "Sleeping",
+    "location": "Asheville",
     "numberOfPets": "1",
     "listPets": []
   }
 ]
-
