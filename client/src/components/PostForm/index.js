@@ -62,7 +62,7 @@ const PostForm = () => {
 
   return (
     <div>
-      <h3>What's on your techy mind?</h3>
+      <h3>PetPosting happens here!</h3>
 
       {Auth.loggedIn() ? (
         <>

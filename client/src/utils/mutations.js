@@ -53,8 +53,8 @@ export const ADD_FRIEND = gql`
 `;
 
 export const ADD_COMMENT = gql`
-  mutation addComment($postId: ID!, $commentText: String!) {
-      addComment(postId: $postId, commentText: $commentText) {
+  mutation addComment($postId: ID!, $commentText: String!, $commentAuthor: String!) {
+      addComment(postId: $postId, commentText: $commentText, commentAuthor: $commentAuthor) {
         _id
         postText
         postAuthor

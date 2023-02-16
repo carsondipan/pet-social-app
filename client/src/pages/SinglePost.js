@@ -9,13 +9,13 @@ import CommentForm from "../components/CommentForm";
 import { QUERY_SINGLE_POST } from "../utils/queries";
 
 const SinglePost = () => {
-    const { postId } = useParams();
+    const { id } = useParams();
     const { loading, data } = useQuery(QUERY_SINGLE_POST, {
-        variables: { postId: postId }
+        variables: { postID: id }
     });
 
     const post = data?.post || {};
-
+    console.log(post)
     if (loading) {
         return <div>Loading ...</div>;
     }
