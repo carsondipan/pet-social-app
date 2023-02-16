@@ -1,11 +1,72 @@
 // Node Modules
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
+import { useMutation } from '@apollo/client';
+import { Navigate, useParams } from 'react-router-dom';
+
 // Utilities
-import { QUERY_USERS, QUERY_USER, QUERY_ME } from '../utils/queries';
+import { QUERY_USERS, QUERY_USER, QUERY_ME, QUERY_POSTS, ADD_POST } from '../utils/queries';
+import Auth from '../../utils/auth';
+
 // Components
 
+
 const AllPosts = () => {
+    if (!user?.username) {
+        return <Navigate to="/login" replace />
+    }
+
+    const [postText, setPostText] = useState('');
+
+    const [characterCount, setCharacterCount] = useState(0);
+
+    const [addPost, { error }] = useMutation(ADD_POST, {
+        update(cache, { data: { addPost } }) {
+            try {
+                const { posts } = cache.readQuery({ query: QUERY_POSTS });
+
+                cache.writeQuery({
+                    query: QUERY_POSTS,
+                    data: { posts: [addPost, ...posts] },
+                });
+            } catch (e) {
+                console.error(e);
+            }
+
+            // update me object's cache
+            const { me } = cache.readQuery({ query: QUERY_ME });
+            cache.writeQuery({
+                query: QUERY_ME,
+                data: { me: { ...me, posts: [...me.posts, addPost] } },
+            });
+        },
+    });
+
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
+
+        try {
+            const { data } = await addPost({
+                variables: {
+                    postText,
+                    postAuthor: Auth.getProfile().data.username,
+                },
+            });
+
+            setPostText('');
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+
+        if (name === 'postText' && value.length <= 280) {
+            setPostText(value);
+            setCharacterCount(value.length);
+        }
+    };
 
     return (
         <body class="bg-teal-20">
@@ -51,10 +112,13 @@ const AllPosts = () => {
                                             fill="#41416E"
                                         />
                                     </svg>
-
+                                    {/* Text Field */}
                                     <input
-                                        placeholder="Write something..."
+                                        name="postText"
+                                        placeholder="Please, leave us a post..."
                                         type="text"
+                                        value={postText}
+                                        onChange={handleChange}
                                         class="w-full ml-2 focus:outline-none bg-transparent border-0 focus:border-0 focus:ring-0"
                                     />
                                 </div>
@@ -102,14 +166,14 @@ const AllPosts = () => {
                                         <span class="hidden md:block">Video</span>
                                     </div>
                                 </div>
-
+                                {/* Submit Button */}
                                 <div
                                     class="hover:bg-teal-500 cursor-pointer flex items-center justify-center"
                                 >
                                     <div
                                         class="flex items-center space-x-1 text-gray-900"
                                     >
-                                        <span class="hidden md:block">Submit</span>
+                                        <span type="submit" class="hidden md:block">Submit</span>
                                     </div>
                                 </div>
                             </div>
