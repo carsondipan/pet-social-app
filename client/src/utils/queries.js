@@ -48,20 +48,20 @@ export const QUERY_ME = gql`
 `;
 
 export const QUERY_SINGLE_POST = gql`
-  query getSinglePost($postId: ID!) {
-    post(post: $postId) {
+ query getSinglePost($postID: ID!) {
+  post(postID: $postID) {
+    _id
+    postText
+    postAuthor
+    createdAt
+    comments {
       _id
-      postText
-      postAuthor
+      commentText
+      commentAuthor
       createdAt
-      comments {
-        _id
-        commentText
-        commentAuthor
-        createdAt
-      }
     }
   }
+}
 `;
 
 export const QUERY_POSTS = gql`

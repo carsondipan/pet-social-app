@@ -39,7 +39,7 @@ const Profile = ({ _id, username, location, numberOfPets }) => {
               >
                 Message
               </button> */}
-              <p class="font-light text-gray-600 mt-3">LOCATION</p>
+              <p class="font-light text-gray-600 mt-3">Location</p>
             </div>
           </div>
 

@@ -10,7 +10,7 @@ const CommentForm = ({ postId }) => {
   const [commentText, setCommentText] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
 
-  const [addComment, { error }] = useMutation(ADD_COMMENT);
+  const [addComment, { error }] = useMutation(ADD_COMMENT); console.log(postId);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -18,7 +18,7 @@ const CommentForm = ({ postId }) => {
     try {
       const { data } = await addComment({
         variables: {
-          postId,
+          postId: postId,
           commentText,
           commentAuthor: Auth.getProfile().data.username,
         },

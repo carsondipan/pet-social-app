@@ -68,6 +68,10 @@ const AllPosts = () => {
             {/* Existing posts */}
             <PostList
               posts={posts}
+<<<<<<< HEAD
+=======
+              title="Comments:"
+>>>>>>> ee90d8b00667ac027f49447b1148e589151ceef0
             />
           </div>
 
