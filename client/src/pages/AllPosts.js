@@ -10,13 +10,9 @@ const AllPosts = () => {
   const { loading, data } = useQuery(QUERY_POSTS);
   const posts = data?.posts || [];
 
-  const renderPostForm = () => {
-    return <PostForm />;
-  };
-
-  const renderPostList = () => {
-    return <PostList />;
-  };
+  // const renderPostForm = () => {
+  //   return <PostForm />;
+  // };
 
 
   return (
@@ -44,11 +40,8 @@ const AllPosts = () => {
 
 
 
-
-
-
-    <body class="bg-gray-50 m-h-screen h-fit">
-
+    <body class="bg-teal-20 min-h-screen h-fit">
+      {/* Left tabs */}
       <div
         class="px-4 py-5 mx-auto sm:max-w-2xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
       >
@@ -68,13 +61,17 @@ const AllPosts = () => {
             </div> */}
           </div>
 
+          {/* Center tabs */}
           <div class="col-span-12 lg:col-span-6 space-y-5">
-            {renderPostForm()}
-            {renderPostList()}
-
-
+            {/* New posts */}
+            <PostForm />
+            {/* Existing posts */}
+            <PostList
+              posts={posts}
+            />
           </div>
 
+          {/* Right tabs */}
           <div class="hidden lg:block col-span-3 space-y-5">
             {/* <div class="bg-white rounded-lg shadow p-6 space-y-5">
               <h3 class="font-bold text-base text-gray-900">

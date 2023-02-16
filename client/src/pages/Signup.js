@@ -11,6 +11,8 @@ const Signup = () => {
     username: '',
     email: '',
     password: '',
+    location: '',
+    numberOfPets: ''
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
