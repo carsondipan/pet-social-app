@@ -37,10 +37,6 @@ const Profile = () => {
     return <Navigate to="/users/:id" replace />;
   }
 
-  if (!user?.username) {
-    return <Navigate to="/login" replace />
-  }
-
   const renderProfile = () => {
     if (usersLoading) return null;
     return <SingleProfile />;
